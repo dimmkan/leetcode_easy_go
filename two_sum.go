@@ -32,15 +32,16 @@ Only one valid answer exists.
 
 Follow-up: Can you come up with an algorithm that is less than O(n2) time complexity?
 */
+package main
 
 func twoSum(nums []int, target int) []int {
-    var res []int
-    for i:=0; i < len(nums); i++ {
-        for j:=i+1; j < len(nums); j++ {
-            if nums[i] + nums[j] == target {
-                res = append(res, i, j)
-            }
-        }
-    }
-    return res
+    m := map[int]int{}
+	for i := 0; ; i++ {
+		x := nums[i]
+		y := target - x
+		if j, ok := m[y]; ok {
+			return []int{j, i}
+		}
+		m[x] = i
+	}
 }
