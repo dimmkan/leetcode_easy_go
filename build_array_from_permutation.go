@@ -42,3 +42,19 @@ func buildArray(nums []int) []int {
 	}
 	return ans
 }
+
+func buildArray_2(nums []int) []int {
+	c := 1001
+
+	for i:=0; i < len(nums); i++ {
+			a := nums[i]
+			b := nums[a]%c
+			nums[i] = a + b * c
+	}
+
+	for i:=0; i < len(nums); i++ {
+			nums[i] /= c
+	}
+
+	return nums
+}
