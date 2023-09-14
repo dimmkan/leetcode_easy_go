@@ -37,8 +37,9 @@ package main
 
 func shuffle(nums []int, n int) []int {
 	var res_arr []int
+	l := len(nums)
 	for i:=0; i<n; i++ {
-			res_arr = append(res_arr, nums[0:n][i], nums[n:len(nums)][i])
+			res_arr = append(res_arr, nums[0:n][i], nums[n:l][i])
 	}
 
 	return res_arr
