@@ -32,6 +32,8 @@ command consists of "G", "()", and/or "(al)" in some order.
 
 package main
 
+import "strings"
+
 func interpret(command string) string {
 	ans := &strings.Builder{}
 	for i, c := range command {
