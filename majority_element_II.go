@@ -24,6 +24,8 @@ Constraints:
 Follow up: Could you solve the problem in linear time and in O(1) space?
 */
 
+package main
+
 func majorityElement(a []int) []int {
 	if len(a) <= 1 {
 		return a

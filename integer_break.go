@@ -22,6 +22,10 @@ Constraints:
 2 <= n <= 58
 */
 
+package main
+
+import "math"
+
 func integerBreak(n int) int {
 	if n < 4 {
 		return n - 1
